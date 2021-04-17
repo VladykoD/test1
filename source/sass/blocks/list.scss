@@ -1,0 +1,27 @@
+
+.list {
+  padding: 0;
+  list-style: none;
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__item {
+  padding: 0 15px;
+  width: 25%;
+
+  @include viewport--lg {
+    width: 33.333%;
+  }
+  @include viewport--sm {
+    width: 50%;
+  }
+  @include viewport--xs {
+    width: 100%;
+  }
+
+  &.errorMessage {
+    width: 100%;
+  }
+}
+
