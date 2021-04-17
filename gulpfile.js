@@ -31,7 +31,6 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gulp.dest('./css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
       .pipe(sourcemap.write('.'))
@@ -41,7 +40,6 @@ const css = () => {
 
 const js = () => {
   return gulp.src(['source/js/*.js'])
-    .pipe(gulp.dest('./js'))
     .pipe(uglify())
       .pipe(rename('index.min.js'))
       .pipe(gulp.dest('./js'))
